@@ -1,0 +1,13 @@
+{
+  "name": "kitten-to-do",
+  "version": "1.0.0",
+  "description": "Tasks and to do app",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lujan Rojas",
+  "license": "ISC"
+}
