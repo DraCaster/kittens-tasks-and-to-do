@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import {Checkbox, Typography, Box, Button} from '@material-ui/core'
+import { Checkbox, Typography, Button, Grid } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/DeleteTwoTone';
 export default class Task extends Component {
 
@@ -11,32 +11,33 @@ export default class Task extends Component {
             textDecoration: this.props.task.done ? 'line-through' : 'none'
         }
     }
-
     render() {
         const { id, title } = this.props.task;
         return (
-            <Box display={'flex'}>
-                <Box margin={'auto'}>
-                <div style={this.StyleComplete()}>
-                <Typography>{title}
-                <Checkbox
-                    onChange={this.props.checkDone.bind(this, id)}
-                    value="primary"
-                    inputProps={{ 'aria-label': 'primary checkbox' }}
-                /></Typography>
-                 <Button
-                    startIcon={<DeleteIcon/>}
-                    variant="contained"
-                    color="secondary"
-                    onClick={this.props.deleteTask.bind(this, id)}
-                >
-                Delete
+            <Grid container
+                direction="row"
+                justify="center"
+                alignItems="center">
+                <Grid item>
+                    <Typography style={this.StyleComplete()}>{title}
+                        <Checkbox
+                            onChange={this.props.checkDone.bind(this, id)}
+                            value="primary"
+                            inputProps={{ 'aria-label': 'primary checkbox' }}
+                        />
+                    </Typography>
+                </Grid>
+                <Grid item>
+                    <Button
+                        startIcon={<DeleteIcon />}
+                        variant="contained"
+                        color="secondary"
+                        onClick={this.props.deleteTask.bind(this, id)}
+                    >
+                        Delete
                 </Button>
-            </div>
-
-                </Box>
-            </Box>
-            
+                </Grid>
+            </Grid>
         )
     }
 }

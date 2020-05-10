@@ -4,7 +4,6 @@ import kitten from "../assets/kitten.png"
 import { withStyles } from "@material-ui/core/styles"
 import { pink } from "@material-ui/core/colors"
 import AddIcon from '@material-ui/icons/PostAddTwoTone';
-import createSpacing from "@material-ui/core/styles/createSpacing"
 
 const styles = theme => ({
   Typography: {
@@ -14,7 +13,7 @@ const styles = theme => ({
     margin: theme.spacing(3)
   }
 });
-class TaskForm extends Component {
+class TaskAdd extends Component {
   state = {
     title: ""
   };
@@ -72,6 +71,6 @@ class TaskForm extends Component {
       </form>
     );
   }
-}
+} 
 
-export default withStyles(styles)(TaskForm)
+export default withStyles(styles)(TaskAdd)

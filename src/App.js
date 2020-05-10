@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom"
 // Components
 import Tasks from "./components/Tasks"
 import Navbar from "./components/Navbar"
-import TaskForm from "./components/TaskForm"
+import TaskAdd from "./components/TaskAdd"
 import About from "./components/About"
 
 // data
@@ -57,7 +57,7 @@ class App extends React.Component {
             path="/"
             render={props => (
               <Card>
-                <TaskForm addTask={this.addTask} />
+                <TaskAdd addTask={this.addTask} />
                 <Tasks
                   tasks={this.state.tasks}
                   checkDone={this.checkDone}
