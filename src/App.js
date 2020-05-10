@@ -9,20 +9,12 @@ import About from "./components/About"
 
 // data
 import tasks from "./sample/tasks.json"
-import kitten from "./assets/kitten.png"
 
 //UI
-import { Typography, Box } from "@material-ui/core"
-import { withStyles } from "@material-ui/core/styles"
-import { pink } from "@material-ui/core/colors"
-
-const styles = theme => ({
-  Typography: {
-    color: pink[500]
-  }
-});
+import {Card} from "@material-ui/core"
 
 class App extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -55,33 +47,23 @@ class App extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    
     return (
       <Router>
-        <div style={{ backgroundColor: "#02d4ad", width:"100%", height:"100vh" }}>
+        <div style={{ backgroundColor: "#02d4ad", width: "100%", height: "100vh" }}>
           <Navbar />
           <Route
             exact
             path="/"
             render={props => (
-              <React.Fragment>
-                <Box display={"flex"}>
-                  <Box margin={"auto"}>
-                    <Typography component="div" className={classes.Typography}>
-                      <Box fontFamily="Monospace" fontSize="h6.fontSize" m={1}>
-                        Add Task or To Do
-                      </Box>
-                    </Typography>
-                  </Box>
-                  <img src={kitten} width="150" height="130" />
-                </Box>
+              <Card>
                 <TaskForm addTask={this.addTask} />
                 <Tasks
                   tasks={this.state.tasks}
                   checkDone={this.checkDone}
                   deleteTask={this.deleteTask}
                 />
-              </React.Fragment>
+              </Card>
             )}
           ></Route>
           <Route path="/about" component={About} />
@@ -91,4 +73,4 @@ class App extends React.Component {
   }
 }
 
-export default withStyles(styles)(App);
+export default App;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {Checkbox, Typography, Box, Button} from '@material-ui/core'
+import DeleteIcon from '@material-ui/icons/DeleteTwoTone';
 export default class Task extends Component {
 
     StyleComplete() {
@@ -24,6 +25,7 @@ export default class Task extends Component {
                     inputProps={{ 'aria-label': 'primary checkbox' }}
                 /></Typography>
                  <Button
+                    startIcon={<DeleteIcon/>}
                     variant="contained"
                     color="secondary"
                     onClick={this.props.deleteTask.bind(this, id)}
