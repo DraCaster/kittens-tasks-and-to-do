@@ -5,8 +5,8 @@ import { Paper } from '@material-ui/core'
 
 class Tasks extends Component {
     render() {
-        return this.props.tasks.map(task => (
-            <Paper elevation="5">
+        return this.props.tasks.map(task=> (
+            <Paper elevation={5} key={task.id}>
                 <Task
                     task={task}
                     key={task.id}

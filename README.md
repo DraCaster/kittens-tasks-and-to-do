@@ -4,7 +4,7 @@
 Los gatitos invaden tus tareas diarias!! 
 En esta sencilla aplicación podrás agregar tareas, marcarlas como hechas y eliminarlas.
 
-![](./src/assets/kittens.png)
+![](./src/assets/example.png)
 
 ## Instalación
 
@@ -24,11 +24,14 @@ npm start
 
 ## Que usé en este proyecto?
 
-La aplicación en principio está desarrollada en ReactJS y Material UI.
+La aplicación está desarrollada en ReactJS y Material UI.
 
-![](./src/assets/kitten.png)
+![](https://media0.giphy.com/media/JIX9t2j0ZTN9S/200w.webp?cid=ecf05e47874ef388da4970678b685a54c5448ef2dcc8dcd3&rid=200w.webp)
 
 ## Historial de versiones
+* 0.2.0
+    * Se agregan más gatitos
+    * Se modifica la interfaz
 * 0.1.0
     * First release
     * CAMBIO: se cambian los estilos con `Material UI` 
@@ -44,4 +47,4 @@ Distribuido bajo la licencia GNU AFFERO GENERAL PUBLIC LICENSE. Ver ``LICENSE`` 
 
 [https://github.com/DraCaster/](https://github.com/DraCaster/)
 
-***Hecho con amor - Alt + 3***
+***Hecho con amor, miau! - Alt + 3***
